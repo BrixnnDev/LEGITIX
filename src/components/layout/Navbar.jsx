@@ -70,12 +70,6 @@ export default function Navbar() {
               </button>
             ))}
             <Link
-              to="/hacks"
-              className="px-3 py-2 text-sm rounded-lg text-white hover:text-orange-400 transition-colors"
-            >
-              Hacks
-            </Link>
-            <Link
               to="/blog"
               className="px-3 py-2 text-sm rounded-lg text-white hover:text-orange-400 transition-colors"
             >
