@@ -53,58 +53,47 @@ export default function VideoShowcase() {
               </div>
             </div>
           )}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f]/40 to-transparent pointer-events-none" />
-        </motion.div>
+          <div className="absolute inset-0 bg-[#0a0a0f]/70 pointer-events-none" />
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mt-16 max-w-2xl mx-auto"
-        >
-          <div className="relative bg-gradient-to-br from-orange-500/5 to-purple-500/5 border border-orange-500/10 rounded-3xl p-8 sm:p-10 text-center overflow-hidden">
-            <img
-              src="/images/Suscripcion.png"
-              alt=""
-              className="absolute inset-0 w-full h-full object-cover opacity-30 pointer-events-none"
-            />
-            <div className="absolute inset-0 bg-gradient-to-br from-[#0a0a0f]/80 to-[#0a0a0f]/90 pointer-events-none" />
-            <div className="absolute -top-20 -right-20 w-60 h-60 bg-orange-500/5 rounded-full blur-3xl" />
-            <div className="absolute -bottom-20 -left-20 w-60 h-60 bg-purple-500/5 rounded-full blur-3xl" />
+          <div className="absolute inset-0 flex items-center justify-center p-6 sm:p-10">
+            <div className="relative w-full max-w-2xl bg-gradient-to-br from-orange-500/10 to-purple-500/10 border border-white/10 rounded-3xl p-8 sm:p-10 text-center overflow-hidden backdrop-blur-md">
+              <div className="absolute -top-20 -right-20 w-60 h-60 bg-orange-500/10 rounded-full blur-3xl" />
+              <div className="absolute -bottom-20 -left-20 w-60 h-60 bg-purple-500/10 rounded-full blur-3xl" />
 
-            <div className="relative z-10">
-              <div className="w-14 h-14 rounded-2xl bg-orange-500/10 flex items-center justify-center mx-auto mb-5">
-                <FiBell className="text-2xl text-orange-400" />
+              <div className="relative z-10">
+                <div className="w-14 h-14 rounded-2xl bg-orange-500/10 flex items-center justify-center mx-auto mb-5">
+                  <FiBell className="text-2xl text-orange-400" />
+                </div>
+
+                <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2">
+                  Recibe notificaciones
+                </h3>
+                <p className="text-gray-400 text-sm mb-7 max-w-md mx-auto leading-relaxed">
+                  Suscríbete y entérate al instante cuando un hack vuelva a estar activo,
+                  haya nuevas actualizaciones o lleguen productos exclusivos.
+                </p>
+
+                <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto">
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="tu@correo.com"
+                    required
+                    className="flex-1 bg-[#12121a] border border-white/5 rounded-xl px-5 py-3.5 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-orange-500/30 transition-colors"
+                  />
+                  <button
+                    type="submit"
+                    className={`px-7 py-3.5 rounded-xl text-sm font-semibold transition-all whitespace-nowrap ${
+                      subscribed
+                        ? "bg-green-500/20 text-green-400 border border-green-500/30"
+                        : "bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-lg shadow-orange-500/20 hover:shadow-orange-500/30"
+                    }`}
+                  >
+                    {subscribed ? "¡Suscrito!" : "Suscribirse"}
+                  </button>
+                </form>
               </div>
-
-              <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2">
-                Recibe notificaciones
-              </h3>
-              <p className="text-gray-400 text-sm mb-7 max-w-md mx-auto leading-relaxed">
-                Suscríbete y entérate al instante cuando un hack vuelva a estar activo,
-                haya nuevas actualizaciones o lleguen productos exclusivos.
-              </p>
-
-              <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto">
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="tu@correo.com"
-                  required
-                  className="flex-1 bg-[#12121a] border border-white/5 rounded-xl px-5 py-3.5 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-orange-500/30 transition-colors"
-                />
-                <button
-                  type="submit"
-                  className={`px-7 py-3.5 rounded-xl text-sm font-semibold transition-all whitespace-nowrap ${
-                    subscribed
-                      ? "bg-green-500/20 text-green-400 border border-green-500/30"
-                      : "bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-lg shadow-orange-500/20 hover:shadow-orange-500/30"
-                  }`}
-                >
-                  {subscribed ? "¡Suscrito!" : "Suscribirse"}
-                </button>
-              </form>
             </div>
           </div>
         </motion.div>
