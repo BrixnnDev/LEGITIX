@@ -1,36 +1,14 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { FiBell, FiShield, FiZap, FiHeadphones, FiLock } from "react-icons/fi";
+import { FiBell } from "react-icons/fi";
 import { FaPlay } from "react-icons/fa";
+import GameMarquee from "./GameMarquee";
 
 const VIDEO_SOURCES = [
   "/videos/video1.mp4",
   "/videos/video2.mp4",
   "/videos/video3.mp4",
   "/videos/video4.mp4",
-];
-
-const info = [
-  {
-    icon: FiShield,
-    title: "100% Seguro",
-    desc: "Productos verificados y garantizados en cada compra.",
-  },
-  {
-    icon: FiZap,
-    title: "Entrega Inmediata",
-    desc: "Recibe tu producto por key al instante después del pago.",
-  },
-  {
-    icon: FiLock,
-    title: "Anti-ban avanzado",
-    desc: "Todos nuestros hacks cuentan con protección anti-ban.",
-  },
-  {
-    icon: FiHeadphones,
-    title: "Soporte 24/7",
-    desc: "Atención personalizada en todo momento.",
-  },
 ];
 
 export default function VideoShowcase() {
@@ -79,34 +57,7 @@ export default function VideoShowcase() {
           <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f]/40 to-transparent pointer-events-none" />
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mt-14 mb-16"
-        >
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {info.map((item, i) => {
-              const Icon = item.icon;
-              return (
-                <motion.div
-                  key={item.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.08 }}
-                  className="bg-[#12121a] border border-white/5 rounded-2xl p-6 text-center hover:border-purple-500/20 transition-all"
-                >
-                  <div className="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center mx-auto mb-3 text-xl">
-                    <Icon />
-                  </div>
-                  <h4 className="text-white font-semibold text-sm mb-1">{item.title}</h4>
-                  <p className="text-gray-500 text-xs leading-relaxed">{item.desc}</p>
-                </motion.div>
-              );
-            })}
-          </div>
-        </motion.div>
+        <GameMarquee />
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}

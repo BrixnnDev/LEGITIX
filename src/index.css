@@ -26,3 +26,16 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #ff8533;
 }
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  animation: marquee 30s linear infinite;
+}
