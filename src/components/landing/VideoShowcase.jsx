@@ -1,15 +1,11 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { FiBell } from "react-icons/fi";
-import { FaPlay } from "react-icons/fa";
 import GameMarquee from "./GameMarquee";
-
-const VIDEO_SRC = "/videos/video2.mp4";
 
 export default function VideoShowcase() {
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
-  const [videoFailed, setVideoFailed] = useState(false);
 
   const handleSubscribe = (e) => {
     e.preventDefault();
@@ -27,31 +23,6 @@ export default function VideoShowcase() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="relative aspect-video rounded-3xl overflow-hidden border border-white/10 bg-[#12121a] shadow-2xl shadow-black/50"
-        >
-          <video
-            src={VIDEO_SRC}
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="w-full h-full object-cover"
-            onError={() => setVideoFailed(true)}
-          />
-          {videoFailed && (
-            <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-orange-500/10 to-purple-500/10">
-              <div className="w-16 h-16 rounded-full bg-white/10 border border-white/20 flex items-center justify-center">
-                <FaPlay className="text-white text-xl ml-1" />
-              </div>
-            </div>
-          )}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f]/40 to-transparent pointer-events-none" />
-        </motion.div>
-
         <GameMarquee />
 
         <motion.div

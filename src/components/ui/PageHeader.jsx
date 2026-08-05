@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 
-export default function PageHeader({ icon: Icon, title, subtitle, videoSrc = "/videos/video1.mp4" }) {
+export default function PageHeader({ icon: Icon, title, subtitle, videoSrc = "/videos/video1.mp4", fullScreen = false }) {
   return (
-    <section className="relative overflow-hidden bg-[#0a0a0f]">
+    <section className={`relative overflow-hidden bg-[#0a0a0f] ${fullScreen ? "min-h-screen flex items-center" : ""}`}>
       <div className="absolute inset-0">
         <video
           src={videoSrc}
@@ -11,12 +11,13 @@ export default function PageHeader({ icon: Icon, title, subtitle, videoSrc = "/v
           loop
           playsInline
           className="w-full h-full object-cover"
+          style={fullScreen ? { width: "100vw", height: "56.25vw", minHeight: "100vh", minWidth: "177.77vh" } : undefined}
         />
-        <div className="absolute inset-0 bg-[#0a0a0f]/70" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0f]/60 via-[#0a0a0f]/20 to-[#0a0a0f]" />
+        <div className="absolute inset-0 bg-[#0a0a0f]/60" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0f]/60 via-[#0a0a0f]/15 to-[#0a0a0f]" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-24 text-center">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-24 text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
