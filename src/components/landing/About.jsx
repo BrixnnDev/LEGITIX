@@ -52,12 +52,16 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-[#12121a] border border-white/5 rounded-2xl p-6 hover:border-orange-500/20 transition-all group"
+                className="bg-[#12121a] border border-white/5 rounded-2xl p-7 flex flex-col items-center text-center hover:border-orange-500/20 hover:shadow-lg hover:shadow-orange-500/5 transition-all group"
               >
                 <div
-                  className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 text-xl transition-transform group-hover:scale-110"
+                  className="relative w-16 h-16 rounded-2xl flex items-center justify-center mb-4 text-2xl transition-transform group-hover:scale-110"
                   style={{ background: `${feature.color}15`, color: feature.color }}
                 >
+                  <span
+                    className="absolute inset-0 rounded-2xl border"
+                    style={{ borderColor: `${feature.color}30` }}
+                  />
                   <Icon />
                 </div>
                 <h3 className="text-lg font-semibold text-white">{feature.title}</h3>
