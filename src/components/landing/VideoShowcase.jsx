@@ -4,12 +4,7 @@ import { FiBell } from "react-icons/fi";
 import { FaPlay } from "react-icons/fa";
 import GameMarquee from "./GameMarquee";
 
-const VIDEO_SOURCES = [
-  "/videos/video1.mp4",
-  "/videos/video2.mp4",
-  "/videos/video3.mp4",
-  "/videos/video4.mp4",
-];
+const VIDEO_SRC = "/videos/video2.mp4";
 
 export default function VideoShowcase() {
   const [email, setEmail] = useState("");
@@ -39,7 +34,7 @@ export default function VideoShowcase() {
           className="relative aspect-video rounded-3xl overflow-hidden border border-white/10 bg-[#12121a] shadow-2xl shadow-black/50"
         >
           <video
-            src={VIDEO_SOURCES[0]}
+            src={VIDEO_SRC}
             autoPlay
             muted
             loop

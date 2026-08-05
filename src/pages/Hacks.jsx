@@ -12,6 +12,7 @@ export default function Hacks() {
         icon={FaBolt}
         title="Hacks Indetectables"
         subtitle="Selecciona un juego para ver los hacks disponibles."
+        videoSrc="/videos/video3.mp4"
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16">

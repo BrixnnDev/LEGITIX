@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 
-export default function PageHeader({ icon: Icon, title, subtitle }) {
+export default function PageHeader({ icon: Icon, title, subtitle, videoSrc = "/videos/video1.mp4" }) {
   return (
     <section className="relative overflow-hidden bg-[#0a0a0f]">
       <div className="absolute inset-0">
         <video
-          src="/videos/video1.mp4"
+          src={videoSrc}
           autoPlay
           muted
           loop
