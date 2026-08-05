@@ -9,8 +9,6 @@ const links = [
   { id: "inicio", label: "Inicio" },
   { id: "about", label: "Nosotros" },
   { id: "productos", label: "Productos" },
-  { id: "proximamente", label: "Próximo" },
-  { id: "blog", label: "Blog" },
 ];
 
 export default function Navbar() {
@@ -71,6 +69,18 @@ export default function Navbar() {
                 {s.label}
               </button>
             ))}
+            <Link
+              to="/hacks"
+              className="px-3 py-2 text-sm rounded-lg text-white hover:text-orange-400 transition-colors"
+            >
+              Hacks
+            </Link>
+            <Link
+              to="/blog"
+              className="px-3 py-2 text-sm rounded-lg text-white hover:text-orange-400 transition-colors"
+            >
+              Blog
+            </Link>
             <Link
               to="/contacto"
               className="px-3 py-2 text-sm rounded-lg text-white hover:text-orange-400 transition-colors"

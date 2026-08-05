@@ -1,19 +1,16 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { GiFireAce } from "react-icons/gi";
-import { FaBolt } from "react-icons/fa";
+import { FaBolt, FaBoxOpen } from "react-icons/fa";
+import SectionTitle from "../ui/SectionTitle";
 
 export default function ProductShowcase() {
   return (
     <section id="productos" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
-      <motion.h2
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="text-3xl sm:text-4xl font-bold text-white text-center mb-10"
-      >
-        Nuestros Productos
-      </motion.h2>
+      <SectionTitle
+        icon={FaBoxOpen}
+        title="Nuestros Productos"
+      />
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <Link to="/cuentas">

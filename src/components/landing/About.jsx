@@ -7,25 +7,21 @@ const features = [
   {
     icon: FiShield,
     title: "100% Seguro",
-    description: "Todos nuestros productos son verificados y garantizados. Compra con total confianza.",
     color: "#00cc88",
   },
   {
     icon: FiZap,
     title: "Entrega Inmediata",
-    description: "Recibe tu producto por key instantáneamente después de la compra. Sin esperas.",
     color: "#ff6600",
   },
   {
     icon: FiUsers,
     title: "Soporte 24/7",
-    description: "Atención al cliente las 24 horas del día, los 7 días de la semana.",
     color: "#00aaff",
   },
   {
     icon: FiClock,
     title: "Actualizaciones",
-    description: "Hacks actualizados constantemente para mantenerte siempre un paso adelante.",
     color: "#cc00ff",
   },
 ];
@@ -64,8 +60,7 @@ export default function About() {
                 >
                   <Icon />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">{feature.description}</p>
+                <h3 className="text-lg font-semibold text-white">{feature.title}</h3>
               </motion.div>
             );
           })}

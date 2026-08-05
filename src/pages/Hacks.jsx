@@ -5,6 +5,8 @@ import GameCard from "../components/products/GameCard";
 import GameCarousel from "../components/products/GameCarousel";
 import SearchBar from "../components/ui/SearchBar";
 import SectionTitle from "../components/ui/SectionTitle";
+import HackStatus from "../components/landing/HackStatus";
+import UpcomingSection from "../components/products/UpcomingSection";
 
 export default function Hacks() {
   const [search, setSearch] = useState("");
@@ -33,6 +35,11 @@ export default function Hacks() {
         {filtered.length === 0 && (
           <p className="text-center text-gray-500 mt-10">No se encontraron juegos.</p>
         )}
+
+        <div className="mt-20">
+          <HackStatus />
+        </div>
+        <UpcomingSection />
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { FiFileText } from "react-icons/fi";
 import { FaNewspaper } from "react-icons/fa";
-import SectionTitle from "../ui/SectionTitle";
+import SectionTitle from "../components/ui/SectionTitle";
 
 const posts = [
   {
@@ -24,15 +24,10 @@ const posts = [
   },
 ];
 
-export default function BlogSection() {
+export default function Blog() {
   return (
-    <section id="blog" className="relative py-24 bg-[#0a0a0f]">
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/3 w-72 h-72 bg-orange-500/5 rounded-full blur-[100px]" />
-        <div className="absolute bottom-0 right-1/3 w-64 h-64 bg-orange-500/5 rounded-full blur-[80px]" />
-      </div>
-
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen pt-28 pb-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle
           icon={FaNewspaper}
           title="Blog"
@@ -64,8 +59,6 @@ export default function BlogSection() {
           ))}
         </div>
       </div>
-
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-orange-500/[0.02] to-transparent pointer-events-none" />
-    </section>
+    </div>
   );
 }

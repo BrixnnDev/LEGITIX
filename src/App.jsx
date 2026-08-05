@@ -6,6 +6,7 @@ import Cart from "./components/cart/Cart";
 import Home from "./pages/Home";
 import Cuentas from "./pages/Cuentas";
 import Hacks from "./pages/Hacks";
+import Blog from "./pages/Blog";
 import GameProducts from "./pages/GameProducts";
 import Contacto from "./pages/Contacto";
 
@@ -21,6 +22,7 @@ function App() {
             <Route path="/cuentas/:game" element={<GameProducts />} />
             <Route path="/hacks" element={<Hacks />} />
             <Route path="/hacks/:game" element={<GameProducts />} />
+            <Route path="/blog" element={<Blog />} />
             <Route path="/contacto" element={<Contacto />} />
           </Routes>
           <Footer />

@@ -3,9 +3,7 @@ import About from "../components/landing/About";
 import WhyAccounts from "../components/landing/WhyAccounts";
 import WhyLegitix from "../components/landing/WhyLegitix";
 import ProductShowcase from "../components/landing/ProductShowcase";
-import BlogSection from "../components/landing/BlogSection";
-import UpcomingSection from "../components/products/UpcomingSection";
-import HackStatus from "../components/landing/HackStatus";
+import VideoShowcase from "../components/landing/VideoShowcase";
 
 export default function Home() {
   return (
@@ -15,9 +13,7 @@ export default function Home() {
       <WhyAccounts />
       <WhyLegitix />
       <ProductShowcase />
-      <BlogSection />
-      <UpcomingSection />
-      <HackStatus />
+      <VideoShowcase />
     </>
   );
 }

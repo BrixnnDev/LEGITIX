@@ -19,10 +19,11 @@ export default function WhyLegitix() {
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               ¿Por qué elegir{" "}
-              <span className="text-orange-500">Legitix</span> para hacks?
+              <span className="text-orange-500">Legitix</span> para{" "}
+              <span className="text-purple-400">hacks</span>?
             </h2>
             <p className="text-gray-400 mb-6 leading-relaxed">
-              Nuestros hacks son desarrollados por expertos y actualizados
+              Nuestros <span className="text-purple-400">hacks</span> son desarrollados por expertos y actualizados
               constantemente para mantenerte siempre un paso adelante con total
               seguridad.
             </p>
@@ -36,7 +37,7 @@ export default function WhyLegitix() {
                 const Icon = item.icon;
                 return (
                   <div key={item.title} className="flex items-start gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-orange-500/10 flex items-center justify-center text-orange-500 shrink-0 mt-0.5">
+                    <div className="w-10 h-10 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-400 shrink-0 mt-0.5">
                       <Icon className="text-lg" />
                     </div>
                     <div>
